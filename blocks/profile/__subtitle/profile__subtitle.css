@@ -1,0 +1,27 @@
+.profile__subtitle {
+    color: white;
+    margin: 0;
+    padding: 0;
+    margin-bottom: calc(25/1280*100vw);
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: calc(18/1280*100vw);
+    line-height: calc(22/1280*100vw);
+    max-width: calc(300/1280*100vw);
+    word-wrap: break-word;
+}
+
+@media screen and (max-width:400px) {
+    .profile__subtitle {
+        margin-top: calc(14/320*100vw);
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 400;
+        font-size: calc(14/320*100vw);
+        line-height: calc(17/320*100vw);
+        text-align: center;
+        max-width: calc(300/320*100vw);
+    }
+    
+}

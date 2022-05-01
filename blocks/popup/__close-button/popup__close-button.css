@@ -1,0 +1,23 @@
+.popup__close-button {
+    background:none;
+    outline: none;
+    border: none;
+    width: calc(32/1280*100vw);
+    height: calc(32/1280*100vw);
+    margin: 0 0 0 calc(430/1280*100vw);
+}
+
+@media screen and (max-width:400px) {
+    .popup__close-button {
+        width: calc(20/320*100vw);
+        height: calc(20/320*100vw);
+        margin: 0 0 calc(16/320*100vw) calc(262/320*100vw);
+    }
+    
+}
+
+.popup__close-button:hover {
+    opacity: 60%;
+    transition: 0.3s linear;
+    cursor:pointer;
+}

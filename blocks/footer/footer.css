@@ -1,0 +1,11 @@
+.footer {
+    margin: calc(67/1280*100vw) auto calc(65/1280*100vw) auto;
+    max-width: calc(880/1280*100vw);
+}
+
+@media screen and (max-width: 400px) {
+    .footer {
+        margin: calc(48/320*100vw) auto calc(36/320*100vw) calc(19/320*100vw); 
+    }
+    
+}

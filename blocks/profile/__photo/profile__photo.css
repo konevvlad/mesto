@@ -1,0 +1,18 @@
+.profile__photo {
+    width: calc(121/1280*100vw);
+    height: calc(121/1280*100vw);
+    border-radius: calc(120/1280*100vw);
+    
+}
+
+@media screen and (max-width: 400px) {
+    .profile__photo {
+        width: calc(127/320*100vw);
+        height: 100%;
+        margin-left: calc((calc(168/320*100vw) - calc(127/320*100vw))/2);
+        margin-right: calc((calc(168/320*100vw) - calc(127/320*100vw))/2);
+        justify-self: center;
+        border-radius: calc(120/320*100vw);
+    }
+    
+}

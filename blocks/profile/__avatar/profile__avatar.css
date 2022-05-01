@@ -1,0 +1,13 @@
+.profile__avatar {
+    width: calc(151/1280*100vw);
+    height: max-content;
+}
+
+@media screen and (max-width: 400px) {
+    .profile__avatar {
+        width:calc(168/320*100vw);
+        height: calc(127/320*100vw);
+        align-self: center;
+    }
+    
+}

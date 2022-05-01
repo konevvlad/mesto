@@ -1,0 +1,16 @@
+.header__logo{
+    width: calc(143/1280*100vw);
+    height:calc(33/1280*100vw);
+    margin-bottom: calc(36/1280*100vw);
+}
+
+
+@media screen and (max-width:400px) {
+    .header__logo {
+        width: calc(103/320*100vw);
+        height:calc(24/320*100vw);
+        margin-bottom: calc(31/320*100vw);
+        margin-left: calc(27/320*100vw);
+    }
+    
+}

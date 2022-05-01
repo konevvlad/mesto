@@ -1,0 +1,25 @@
+.profile__title {
+    color: white;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: calc(42/1280*100vw);
+    line-height: 114%;
+    margin: 0;
+    padding: 0;
+    max-width: calc(300/1280*100vw);
+    word-wrap: break-word;
+    
+}
+
+@media screen and (max-width:400px) {
+    .profile__title {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: calc(27/320*100vw);
+    line-height: calc(33/320*100vw);
+    text-align: center;
+    max-width: calc(250/320*100vw);
+}
+}

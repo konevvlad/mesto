@@ -1,0 +1,22 @@
+.profile__edit-button-image {
+    object-fit: contain;
+    position: absolute;
+    top:calc(7/1280*100vw);
+    bottom:calc(7/1280*100vw);
+    right:calc(7/1280*100vw);
+    left:calc(7/1280*100vw);
+    width: calc(10/1280*100vw);
+    height: calc(10/1280*100vw);
+   
+}
+
+@media screen and (max-width: 400px) {
+    .profile__edit-button-image {
+        top:calc(5.25/320*100vw);
+        bottom:calc(5.25/320*100vw);
+        right:calc(5.25/320*100vw);
+        left:calc(5.25/320*100vw);
+        width: calc(7.5/320*100vw);
+        height: calc(7.5/320*100vw);
+    }
+}

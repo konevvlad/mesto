@@ -1,0 +1,7 @@
+.element {
+    font-size: 0;
+    box-sizing: border-box;
+    background-color: white;
+    overflow: hidden;
+    border-radius: 5%;
+}

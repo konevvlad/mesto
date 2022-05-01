@@ -1,0 +1,16 @@
+.footer__copyright {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: calc(18/1280*100vw);
+    line-height: calc(22/1280*100vw);
+    color:#545454;
+}
+
+@media screen and (max-width: 400px ) {
+    .footer__copyright {
+        font-size: calc(14/320*100vw);
+        line-height: calc(17/320*100vw);
+    }
+    
+}
