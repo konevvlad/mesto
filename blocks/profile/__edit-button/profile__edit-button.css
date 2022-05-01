@@ -5,7 +5,7 @@
     width: calc(24/1280*100vw);
     height: calc(24/1280*100vw);
     background-color: black;
-    outline: none; 
+    outline: none;
     margin: calc(20/1280*100vw) auto calc(5/1280*100vw) calc(25/1280*100vw);
     border: calc(1/1280*100vw) solid #ffff;
 }
@@ -21,8 +21,6 @@
     .profile__edit-button {
     width: calc(18/320*100vw);
     height: calc(18/320*100vw);
-    background-color: black;
-    outline: none; 
     margin: calc(10/320*100vw) 0 0 calc(10/320*100vw);
     }
 }

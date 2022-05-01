@@ -3,7 +3,7 @@
     margin: 0;
     padding: 0;
     margin-bottom: calc(25/1280*100vw);
-    font-family: 'Inter';
+    font-family: 'Inter', 'Arial', sans-serif;
     font-style: normal;
     font-weight: 400;
     font-size: calc(18/1280*100vw);

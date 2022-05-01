@@ -3,7 +3,7 @@
     outline: none;
     border: none;
     border-bottom: 1px rgba(0, 0, 0, .5) solid;
-    font-family: 'Inter';
+    font-family: 'Inter', 'Arial', sans-serif;
     font-style: normal;
     font-weight: 400;
     font-size: calc(14/1280*100vw);
