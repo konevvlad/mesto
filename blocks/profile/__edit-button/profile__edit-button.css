@@ -2,12 +2,16 @@
     box-sizing: border-box;
     padding: 0;
     position: relative;
-    width: calc(24/1280*100vw);
-    height: calc(24/1280*100vw);
+    width: 24px;
+    height: 24px;
     background-color: black;
     outline: none;
-    margin: calc(20/1280*100vw) auto calc(5/1280*100vw) calc(25/1280*100vw);
-    border: calc(1/1280*100vw) solid #ffff;
+    margin: 16px auto 5px 21px;
+    border: 1px solid #ffff;
+    background-image: url(../../../images/edit-button.png);
+    background-position: center;
+    background-size: 14px auto;
+    background-repeat: no-repeat;
 }
 
 .profile__edit-button:hover {
@@ -16,11 +20,20 @@
     cursor:pointer;
 }
 
+@media screen and (max-width: 660px) {
+    .profile__edit-button {
+    width: calc(26/660*100vw);
+    height: calc(26/660*100vw);
+    margin: calc(25/660*100vw) 0 calc(5/660*100vw) calc(10/660*100vw);
+    }
+}
 
-@media screen and (max-width: 400px) {
+
+@media screen and (max-width: 320px) {
     .profile__edit-button {
     width: calc(18/320*100vw);
+    background-size: 7.5px auto;
     height: calc(18/320*100vw);
-    margin: calc(10/320*100vw) 0 0 calc(10/320*100vw);
+    margin: calc(7/320*100vw) 0 0 calc(14/320*100vw);
     }
 }

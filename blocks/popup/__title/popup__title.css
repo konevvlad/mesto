@@ -1,13 +1,24 @@
 .popup__title {
-    margin: calc(34/1280*100vw) calc(64/1280*100vw) 0 calc(36/1280*100vw);
+    margin: 34px 64px 0 36px;
     font-family: 'Inter', 'Arial', sans-serif;
     font-style: normal;
     font-weight: 900;
-    font-size: calc(24/1280*100vw);
-    line-height: calc(29/1280*100vw);
+    font-size: 24px;
+    line-height: 29px;
+    height: 23px;
 }
 
-@media screen and (max-width:400px) {
+@media screen and (max-width:600px) {
+    .popup__title {
+        margin: calc(25/600*100vw) calc(22/600*100vw) 0 calc(22/600*100vw);
+        font-size: calc(18/600*100vw);
+        line-height: calc(22/600*100vw);
+        align-self: center;
+    }
+    
+}
+
+@media screen and (max-width:320px) {
     .popup__title {
         margin: calc(25/320*100vw) calc(22/320*100vw) 0 calc(22/320*100vw);
         font-size: calc(18/320*100vw);

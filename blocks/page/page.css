@@ -1,16 +1,17 @@
 .page {
+    position: relative;
     box-sizing: border-box;
-    max-width:100%;
+    max-width:880px;
     background-color: black;
-    margin: 0 auto;
+    margin: 0 auto 0 auto;
     height: 100%;
    
 }
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 900px) {
     .page {
-        max-width: 400px;
-        margin: 0;
+        max-width: 100%
+    
     }
     
 }

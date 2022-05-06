@@ -1,16 +1,12 @@
 .header {
-    margin: calc(45/1280*100vw) auto calc(36.25/1280*100vw) auto;
-    max-width: calc(880/1280*100vw);
-    border-bottom: calc(1/1280*100vw) #545454 solid;
+    max-width: 100%;
+    border-bottom: 1px #545454 solid;
     justify-self: center;
 }
 
-
-
-@media screen and (max-width: 400px) {
+@media screen  and (max-width:320px) {
     .header {
-    margin: calc(28/320*100vw) 0 calc(36.25/320*100vw) 0;
-    max-width: 100%;
+        height: calc(84/320*100vw);
+    }
     
-}
 }

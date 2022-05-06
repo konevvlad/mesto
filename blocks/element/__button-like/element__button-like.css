@@ -4,8 +4,8 @@
     border: none;
     outline: none;
     background-color: white;
-    width: calc(22/1280*100vw);
-    height: calc(19/1280*100vw);
+    width: 22px;
+    height: 19px;
     background-image: url(../../../images/like.svg);
     background-position: center;
     background-size: contain;

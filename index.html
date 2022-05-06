@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-  <link rel="stylesheet" href="./pages/index.css" type="text/css">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./pages/index.css" type="text/css">
   <title>Mesto</title>
 </head>
 <body class="page">
@@ -20,18 +20,18 @@
 <div class="profile__info">
     <div class="profile__name">
         <h1 id='profile__name' class="profile__title">Жак-Ив Кусто</h1>
-        <button class="profile__edit-button"><img class="profile__edit-button-image" src='./images/edit-button.png' alt="кнопка редактирования"></button>
+        <button class="profile__edit-button"></button>
     </div>
     <h2 id="profile__job" class="profile__subtitle">Исследователь океана</h2>
 </div>
-<button class="profile__add-button"><img class='profile__add-button-image' src="./images/add-button.svg" alt="кнопка добавления"></button>
+<button class="profile__add-button"></button>
 </section>
 
 <section class="elements">
     <div class="element">
         <img class="element__image" src="./images/1.png" alt="карачаевск">
         <div class="element__caption">
-            <p class="element__name">Карачаево-Ччто-то-там</p>
+            <h2 class="element__name">Карачаево-Ччто-то-там</h2>
             <button class="element__button-like"></button>
         </div>
 
@@ -40,7 +40,7 @@
     <div class="element">
         <img class="element__image" src="./images/2.png" alt="Домбай">
         <div class="element__caption">
-            <p class="element__name">Домбай</p>
+            <h2 class="element__name">Домбай</h2>
             <button class="element__button-like"></button>
         </div>
 
@@ -49,7 +49,7 @@
     <div class="element">
         <img class="element__image" src="./images/3.png" alt="Эльбрус">
         <div class="element__caption">
-            <p class="element__name">Гора Эльбрус</p>
+            <h2 class="element__name">Гора Эльбрус</h2>
             <button class="element__button-like"></button>
         </div>
 
@@ -58,7 +58,7 @@
     <div class="element">
         <img class="element__image" src="./images/4.png" alt="Домбай">
         <div class="element__caption">
-            <p class="element__name">Домбай</p>
+            <h2 class="element__name">Домбай</h2>
             <button class="element__button-like"></button>
         </div>
 
@@ -67,7 +67,7 @@
     <div class="element">
         <img class="element__image" src="./images/5.png" alt="Эльбрус">
         <div class="element__caption">
-            <p class="element__name">Гора Эльбрус</p>
+            <h2 class="element__name">Гора Эльбрус</h2>
             <button class="element__button-like"></button>
         </div>
 
@@ -76,7 +76,7 @@
     <div class="element">
         <img class="element__image" src="./images/6.png" alt="Карачаевск">
         <div class="element__caption">
-            <p class="element__name">Карачаевск</p>
+            <h2 class="element__name">Карачаевск</h2>
             <button class="element__button-like"></button>
         </div>
 
@@ -92,12 +92,12 @@
 <div class="popup">
     <div class="popup__overlay"></div>
      <div class="popup__window">
-        <button class="popup__close-button"><img class='popup__close-button-image' src="./images/CloseIcon.svg" alt="крестик"></button>
+        <button class="popup__close-button"></button>
         <div class="popup__editing-form">
             <h2 class="popup__title">Редактировать профиль</h2>
-            <input type='text' id="enter-name" class="popup__profile-title-input">
-            <input type='text' class="popup__profile-subtitle-input">
-            <input type="submit" class="popup__save-button" value="Сохранить">
+            <input type='text' id="enter-name" class="popup__profile-input popup__profile-input_title">
+            <input type='text' class="popup__profile-input popup__profile-input_subtitle">
+            <button type="submit" class="popup__save-button">Сохранить</button>
         </div>
     </div>
 </div>

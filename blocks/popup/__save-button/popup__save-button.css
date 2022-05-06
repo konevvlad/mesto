@@ -1,26 +1,37 @@
 .popup__save-button {
     background-color: black;
+    padding: 0;
     color: white;
     outline: none;
     border: none;
-    width: calc(358/1280*100vw);
-    height: calc(50/1280*100vw);
+    width: 358px;
+    height: 50px;
     font-family: 'Inter';
     font-style: normal;
     font-weight: 400;
-    font-size: calc(18/1280*100vw);
-    line-height: calc(22/1280*100vw);
+    font-size: 18px;
+    line-height: 22px;
     text-align: center;
-    margin: calc(48/1280*100vw) calc(36/1280*100vw) calc(37/1280*100vw) calc(36/1280*100vw);
+    margin: 48px 36px 37px 36px;
 }
 
- @media screen and (max-width:400px) {
+@media screen and (max-width:600px) {
+    .popup__save-button {
+       width: calc(238/600*100vw);
+       height: calc(46/600*100vw);
+       font-size: calc(14/600*100vw);
+       line-height: calc(17/600*100vw);
+       margin: calc(47/600*100vw) calc(22/600*100vw) calc(25/600*100vw) calc(22/600*100vw);
+ }
+}
+
+ @media screen and (max-width:320px) {
      .popup__save-button {
         width: calc(238/320*100vw);
         height: calc(46/320*100vw);
         font-size: calc(14/320*100vw);
         line-height: calc(17/320*100vw);
-        margin: calc(45/320*100vw) calc(22/320*100vw) calc(25/320*100vw) calc(22/320*100vw);
+        margin: calc(47/320*100vw) calc(22/320*100vw) calc(25/320*100vw) calc(22/320*100vw);
   }
 }
 

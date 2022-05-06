@@ -1,15 +1,24 @@
 .header__logo{
-    width: calc(143/1280*100vw);
-    height:calc(33/1280*100vw);
-    margin-bottom: calc(36/1280*100vw);
+    width: 143px;
+    height:33px;
+    margin-top: 45px;
+    margin-bottom: 36px;
 }
 
-
-@media screen and (max-width:400px) {
+@media screen and (max-width:900px) {
     .header__logo {
-        width: calc(103/320*100vw);
-        height:calc(24/320*100vw);
-        margin-bottom: calc(31/320*100vw);
+        transition: 0.1s linear;
+        margin-left: calc(27/900*100vw);
+    }
+    
+}
+
+@media screen and (max-width:320px) {
+    .header__logo {
+        width: calc(103.74/320*100vw);
+        height:calc(24.4/320*100vw);
+        margin-top: calc(28/320*100vw);
+        margin-bottom: calc(31.6/320*100vw);
         margin-left: calc(27/320*100vw);
     }
     

@@ -2,12 +2,25 @@
     background:none;
     outline: none;
     border: none;
-    width: calc(32/1280*100vw);
-    height: calc(32/1280*100vw);
-    margin: 0 0 0 calc(430/1280*100vw);
+    width: 32px;
+    height: 32px;
+    margin: 0 0 8px 438px;
+    background-image: url(../../../images/CloseIcon.svg);
+    background-position: center;
+    background-size: 100% auto;
+    background-repeat: no-repeat;
 }
 
-@media screen and (max-width:400px) {
+@media screen and (max-width:600px) {
+    .popup__close-button {
+        width: calc(20/600*100vw);
+        height: calc(20/600*100vw);
+        margin: 0 0 calc(16/600*100vw) calc(262/600*100vw);
+    }
+    
+}
+
+@media screen and (max-width:320px) {
     .popup__close-button {
         width: calc(20/320*100vw);
         height: calc(20/320*100vw);

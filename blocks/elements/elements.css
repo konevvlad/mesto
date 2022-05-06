@@ -1,13 +1,39 @@
 .elements {
-    margin-top: calc(46/1280*100vw);
+    margin-top: 45px;
     display: grid;
-    grid-template-columns: repeat(3, calc(282/1280*100vw));
-    grid-template-rows: repeat(2,calc(361/1280*100vw));
-    column-gap: calc(17/1280*100vw);
-    row-gap: calc(20/1280*100vw);
+    grid-template-columns: repeat(3, 282px);
+    grid-template-rows: repeat(2, 361px);
+    column-gap: 17px;
+    row-gap: 20px;
 }
 
-@media screen and (max-width:400px) {
+@media screen and (max-width:900px) {
+    .elements {
+        transition: 0.3s linear;
+        margin-top: calc(36/900*100vw);
+        grid-template-columns: repeat(3, calc(282/900*100vw));
+        grid-template-rows: repeat(2, calc(361/900*100vw));
+        row-gap: calc(20/900*100vw);
+        column-gap: calc(17/900*100vw);
+        margin: calc(46/900*100vw) calc(10/900*100vw) 0 calc(10/900*100vw);
+        
+    }
+    
+}
+
+@media screen and (max-width:660px) {
+    .elements {
+        margin-top: calc(36/660*100vw);
+        grid-template-columns: repeat(2, calc(282/660*100vw));
+        grid-template-rows: repeat(3, calc(361/660*100vw));
+        row-gap: calc(20/660*100vw);
+        column-gap: calc(16/660*100vw);
+        margin: calc(36/660*100vw) calc(40/660*100vw) 0 calc(40/660*100vw);
+    }
+    
+}
+
+@media screen and (max-width:320px) {
     .elements {
         margin-top: calc(36/320*100vw);
         grid-template-columns: calc(282/320*100vw);

@@ -26,14 +26,14 @@
 @import url(../blocks/popup/__window/popup__window.css);
 @import url(../blocks/popup/__title/popup__title.css);
 @import url(../blocks/popup/__save-button/popup__save-button.css);
-@import url(../blocks/popup/__profile-title-input/popup__profile-title-input.css);
-@import url(../blocks/popup/__profile-subtitle-input/popup__profile-subtitle-input.css);
+@import url(../blocks/popup/__profile-input/_title/popup__profile-input_title.css);
+@import url(../blocks/popup/__profile-input/_subtitle/popup__profile-input_subtitle.css);
 @import url(../blocks/popup/__overlay/popup__overlay.css);
 @import url(../blocks/popup/__editing-form/popup__edititng-form.css);
 @import url(../blocks/popup/__close-button/popup__close-button.css);
 @import url(../blocks/popup/__close-button-image/popup__close-button-image.css);
-@import url(../blocks/popup/_active/popup_active.css)
-
+@import url(../blocks/popup/_active/popup_active.css);
+@import url(../blocks/popup/__profile-input/__profile-input.css);
 
 /* *,*::before,*::after {outline: 1px solid red} */
 
