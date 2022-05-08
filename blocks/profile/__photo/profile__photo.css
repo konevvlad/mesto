@@ -8,16 +8,8 @@
 
 @media screen and (max-width: 660px) {
     .profile__photo {
-        margin: 3.75px AUTO 3.75px auto;
+        margin: 3.75px auto 3.75px auto;
 
-    }
-    
-}
-
-@media screen and (max-width: 320px) {
-    .profile__photo {
-        align-self: center;
-        margin: 3.75px AUTO 3.75px auto;
     }
     
 }
