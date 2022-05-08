@@ -1,5 +1,5 @@
 .element {
-    font-size: 0;
+    font-size: 0; /*убирает пробел между element__image и element__caption*/
     box-sizing: border-box;
     background-color: white;
     overflow: hidden;

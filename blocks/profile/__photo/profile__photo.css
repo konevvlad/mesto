@@ -1,15 +1,14 @@
 .profile__photo {
-    margin: 3.75px 24.375px 0 0;
-    width: 121px;
-    height: 121px;
+    margin: 0 30px 0 0;
+    width: 120px;
+    height: 120px;
     border-radius: 120px;
     
 }
 
 @media screen and (max-width: 660px) {
     .profile__photo {
-        width: 100%;
-        height: auto;
+        margin: 3.75px AUTO 3.75px auto;
 
     }
     
@@ -17,11 +16,8 @@
 
 @media screen and (max-width: 320px) {
     .profile__photo {
-        width: calc(120/320*100vw);
-        height: auto;
         align-self: center;
-        border-radius: calc(120/320*100vw);
-        margin: 3.75px 24.375px 3.75px 24.375px;
+        margin: 3.75px AUTO 3.75px auto;
     }
     
 }

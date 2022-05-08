@@ -4,34 +4,40 @@
     font-style: normal;
     font-weight: 500;
     font-size: 42px;
-    line-height: 48px;
+    line-height: 94%;
     margin: 0;
     padding: 0;
-    max-width: 300px;
-    word-wrap: break-word;
+    vertical-align: top;
+    letter-spacing: 0.5px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    max-width: 400px;
     
 }
 
 @media screen and (max-width:660px) {
     .profile__title {
-    margin-left:calc(100/660*100vw);
     font-family: 'Inter';
     font-style: normal;
     font-weight: 500;
     text-align: center;
     font-size: calc(42/660*100vw);
+    max-width: 300px;
 }
 }
 
 @media screen and (max-width:320px) {
     .profile__title {
-    margin-left:calc(46/320*100vw);
+    box-sizing: border-box;
+    padding-top: 2px;
     font-family: 'Inter';
     font-style: normal;
     font-weight: 500;
     font-size: calc(27/320*100vw);
-    line-height: calc(33/320*100vw);
     text-align: center;
-    max-width: calc(250/320*100vw);
+    letter-spacing: 0.3px;
+    max-width: 180px;
+
 }
 }

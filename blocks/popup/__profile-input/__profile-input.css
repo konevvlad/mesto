@@ -1,7 +1,7 @@
 .popup__profile-input {
     outline: none;
     border: none;
-    border-bottom: 1px rgba(0, 0, 0, .5) solid;
+    border-bottom: 1px rgba(0, 0, 0, .2) solid; /*opacity в макете 0.2*/
     font-family: 'Inter', 'Arial', sans-serif;
     font-style: normal;
     padding: 0;
