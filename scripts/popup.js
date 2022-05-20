@@ -34,3 +34,44 @@ formElement.addEventListener('click', function(evt) {
     }
 ) 
 
+
+
+const initialCards = [
+    {
+      name: 'Архыз',
+      link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/arkhyz.jpg'
+    },
+    {
+      name: 'Челябинская область',
+      link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/chelyabinsk-oblast.jpg'
+    },
+    {
+      name: 'Иваново',
+      link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/ivanovo.jpg'
+    },
+    {
+      name: 'Камчатка',
+      link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/kamchatka.jpg'
+    },
+    {
+      name: 'Холмогорский район',
+      link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/kholmogorsky-rayon.jpg'
+    },
+    {
+      name: 'Байкал',
+      link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/baikal.jpg'
+    }
+  ]; 
+
+
+
+initialCards.forEach(function(item){
+    let elementName = document.querySelector('.element__name');
+  let elementImage = document.querySelector('.element__image');
+  let placesContainer=document.querySelector('.elements')
+const elementTemplate=document.querySelector('#card-element').content;
+const cardElement = elementTemplate.querySelector('.element').cloneNode(true);
+    cardElement.querySelector('.element__name').textContent = item.name;
+    cardElement.querySelector('.element__image').src = item.link;
+    placesContainer.append(cardElement);
+});
