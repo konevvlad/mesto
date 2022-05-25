@@ -1,0 +1,16 @@
+.popup-addition__profile-input_subtitle {
+    margin: 30px 36px 0 36px;    
+}
+
+@media screen and (max-width:600px) {
+    .popup-addition__profile-input_subtitle {
+        margin: calc(25/600*100vw) calc(22/600*100vw) 0 calc(22/600*100vw);
+    }
+}
+
+
+@media screen and (max-width:320px) {
+    .popup-addition__profile-input_subtitle {
+        margin: calc(25/320*100vw) calc(22/320*100vw) 0 calc(22/320*100vw);
+    }
+}

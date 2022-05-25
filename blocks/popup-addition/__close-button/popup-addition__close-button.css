@@ -1,0 +1,37 @@
+.popup-addition__close-button {
+    padding: 0;
+    background:none;
+    outline: none;
+    border: none;
+    width: 32px;
+    height: 32px;
+    margin: 0 0 8px 438px;
+    background-image: url(../../../images/CloseIcon.svg);
+    background-position: center;
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+}
+
+@media screen and (max-width:600px) {
+    .popup-addition__close-button {
+        width: calc(20/600*100vw);
+        height: calc(20/600*100vw);
+        margin: 0 0 calc(16/600*100vw) calc(262/600*100vw);
+    }
+    
+}
+
+@media screen and (max-width:320px) {
+    .popup-addition__close-button {
+        width: calc(20/320*100vw);
+        height: calc(20/320*100vw);
+        margin: 0 0 calc(16/320*100vw) calc(262/320*100vw);
+    }
+    
+}
+
+.popup-addition__close-button:hover {
+    opacity: 60%;
+    transition: 0.3s linear;
+    cursor:pointer;
+}

@@ -28,7 +28,11 @@
 <section class="elements">
     <template id="card-element">
         <div class="element">
-            <img class="element__image" src='' alt="карачаевск">
+            <button class="element__button-delete"></button>
+           
+            <button class="element__image-click"><img class="element__image" src='' alt=></button>
+            <!-- <button class="element__button-delete"></button> -->
+           
             <div class="element__caption">
                 <h2 class="element__name"></h2>
                 <button class="element__button-like"></button>
@@ -56,6 +60,30 @@
         </div>
     </div>
 </div>
+
+
+<div class="popup-addition">
+    <div class="popup-addition__overlay"></div>
+     <div class="popup-addition__window">
+        <button class="popup-addition__close-button"></button>
+        <div class="popup-addition__editing-form">
+            <h2 class="popup__title">Новое место</h2>
+            <input type='text' class="popup-addition__profile-input popup-addition__profile-input_title" placeholder="Название">
+            <input type='text' class="popup-addition__profile-input popup-addition__profile-input_subtitle" placeholder="Ссылка на картинку">
+            <button type="submit" class="popup-addition__save-button">Добавить</button>
+        </div>
+    </div>
+</div>
+
+<div class="popup-image">
+    <div class="popup-image__overlay"></div>
+     <div class="popup-image__window">
+        <button class="popup-image__close-button"></button>
+        <img class="popup-image__photo" src="" alt="photo">
+        <h2 class="popup-image__title"></h2>
+    </div>
+</div>
+
 
 </body>
 <script src="./scripts/popup.js" type="text/javascript"></script>

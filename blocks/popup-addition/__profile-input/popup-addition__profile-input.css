@@ -1,0 +1,30 @@
+.popup-addition__profile-input {
+    outline: none;
+    border: none;
+    border-bottom: 1px rgba(0, 0, 0, .2) solid; /*opacity в макете 0.2*/
+    font-family: 'Inter', 'Arial', sans-serif;
+    font-style: normal;
+    padding: 0;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    height: 27px;
+    
+}
+
+@media screen and (max-width:600px) {
+    .popup-addition__profile-input {
+        font-size: calc(14/600*100vw);
+        line-height: calc(17/600*100vw);
+        height: calc(30/600*100vw);
+    }
+}
+
+
+@media screen and (max-width:320px) {
+    .popup-addition__profile-input {
+        font-size: calc(14/320*100vw);
+        line-height: calc(17/320*100vw);
+        height: calc(30/320*100vw);
+    }
+}

@@ -1,4 +1,4 @@
-.popup {
+.popup-addition {
     visibility: hidden;
     opacity: 0;
     transition: 0.4s linear;

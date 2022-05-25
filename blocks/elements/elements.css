@@ -4,6 +4,7 @@
     display: grid;
     grid-template-columns: repeat(3, 282px);
     grid-template-rows: repeat(2, 361px);
+    grid-auto-rows: 361px;
     column-gap: 17px;
     row-gap: 20px;
 }
@@ -13,6 +14,7 @@
         transition: 0.3s linear;
         grid-template-columns: repeat(3, calc(282/900*100vw));
         grid-template-rows: repeat(2, calc(361/900*100vw));
+        grid-template-rows: calc(361/900*100vw);
         row-gap: calc(20/900*100vw);
         column-gap: calc(17/900*100vw);
         padding: calc(46/900*100vw) calc(10/900*100vw) 0 calc(10/900*100vw);
@@ -25,6 +27,7 @@
     .elements {
         grid-template-columns: repeat(2, calc(282/660*100vw));
         grid-template-rows: repeat(3, calc(361/660*100vw));
+        grid-template-rows: calc(361/660*100vw);
         row-gap: calc(20/660*100vw);
         column-gap: calc(16/660*100vw);
         padding: calc(36/660*100vw) calc(40/660*100vw) 0 calc(40/660*100vw);
@@ -36,6 +39,7 @@
     .elements {
         grid-template-columns: calc(282/320*100vw);
         grid-template-rows: repeat(6, calc(361/320*100vw));
+        grid-template-rows: calc(361/320*100vw);
         row-gap: calc(20/320*100vw);
         padding: calc(36/320*100vw) calc(19/320*100vw) 0 calc(19/320*100vw);
     }
