@@ -1,0 +1,43 @@
+.popup__image-window {
+    position: absolute;
+    width:max-content;
+    height:max-content;
+    z-index: 10;
+    top: 50px;
+    left: 0;
+    right: 0;
+    margin: auto;
+
+
+}
+
+
+@media screen and (max-width:900px) {
+    .popup__image-window  {
+        top: calc(150/900*100vw);
+        
+        
+    }
+    
+}
+
+
+@media screen and (max-width:600px) {
+    .popup__image-window  {
+        top: calc(150/600*100vw);
+        
+
+        
+    }
+    
+}
+
+@media screen and (max-width:400px) {
+    .popup__image-window  {
+        top: calc(87/320*100vw);
+        
+
+        
+    }
+    
+}
