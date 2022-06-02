@@ -1,0 +1,29 @@
+.popup__image-title {
+    margin: 10px 0 auto auto;
+    font-family: 'Inter', 'Arial', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 15px;
+    color: white;
+}
+
+@media screen and (max-width:600px) {
+    .popup__image-title {
+       
+        font-size: calc(18/600*100vw);
+        line-height: calc(22/600*100vw);
+        align-self: center;
+    }
+    
+}
+
+@media screen and (max-width:320px) {
+    .popup__image-title {
+        
+        font-size: calc(18/320*100vw);
+        line-height: calc(22/320*100vw);
+        align-self: center;
+    }
+    
+}
