@@ -28,9 +28,9 @@ popupOpenBtn.addEventListener('click', function() {
 })
 
 
-let formElement = document.querySelector('.popup__save-button')
+let formElement = document.querySelector('.popup__editing-form')
 
-formElement.addEventListener('click', function(evt) {
+formElement.addEventListener('submit', function(evt) {
         evt.preventDefault (); 
         profileName.textContent = inputName.value;
         profileJob.textContent = inputJob.value;
@@ -102,9 +102,9 @@ additionOpnBtn.addEventListener('click', function() {
 
 })
 
-let addFormElement=document.querySelector('.popup-addition__save-button');
+let addFormElement=document.querySelector('.popup-addition__editing-form');
 
-addFormElement.addEventListener('click', function(evt) {
+addFormElement.addEventListener('submit', function(evt) {
   evt.preventDefault();
   if (addName.value !== "" || addLink.value !== "") {
      addPopup.classList.remove('popup-addition_active');
@@ -115,7 +115,6 @@ addFormElement.addEventListener('click', function(evt) {
       cardElement.querySelector('.element__image').src = addLink.value;
       cardElement.querySelector('.element__image').alt = addName.value;
       placesContainer.prepend(cardElement);}
-      else {addPopup.classList.remove('popup-addition_active');}
       pressLike()
       deleteCard();
       openFullPhoto()
