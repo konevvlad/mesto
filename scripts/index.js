@@ -15,6 +15,32 @@ const elementImage = document.querySelector('.element__image');
 const formProfileEdit = document.querySelector('.popup__editing-form');
 const addFormElement=document.querySelector('.popup__addition-editing-form');
 const popupPhotoClsBtn = document.querySelector('.popup__image-close-button');
+const placesContainer=document.querySelector('.elements');
+const deleteCard = function(evt) {
+  evt.preventDefault();  
+  let card = document.querySelector('.element');
+  evt.target.closest('.element').remove();
+};
+
+const pressLike = function(evt) {
+  evt.preventDefault();
+  const eventTarget=evt.target
+  eventTarget.classList.toggle('element__button-like_active')
+};
+
+const openFullPhoto = function(evt) {
+        
+  const imageFull = document.querySelector('.popup__image-photo')
+  const imageCaption = document.querySelector('.popup__image-title')
+  const popupPhoto = document.querySelector('.popup__image');
+  imageFull.src=evt.target.src;
+  imageFull.alt=evt.target.closest('.element__image').alt
+  imageCaption.textContent=evt.target.closest('.element__image').alt;
+  openPopup(popupPhoto);  
+  popupPhotoClsBtn.addEventListener('click', function(evt) {
+    closePopup(popupPhoto);
+  })
+};
 
 
 function openPopup(popup) {
@@ -26,66 +52,34 @@ function closePopup(popup) {
 }
 
 function createCard(name, link) {
-  let placesContainer=document.querySelector('.elements')
+  
   const elementTemplate=document.querySelector('#card-element').content;
   const cardElement = elementTemplate.querySelector('.element').cloneNode(true);
     cardElement.querySelector('.element__name').textContent = name;
     cardElement.querySelector('.element__image').src = link;
     cardElement.querySelector('.element__image').alt = name;
-    
-    
-    placesContainer.prepend(cardElement)
+    const deleteBtn=cardElement.querySelector('.element__button-delete');
+      deleteBtn.addEventListener('click', deleteCard); 
+      const like=cardElement.querySelector('.element__button-like');
+      like.addEventListener('click', pressLike);
+      const imageClick = cardElement.querySelector('.element__image-click');
+      imageClick.addEventListener('click', openFullPhoto);
+
+
+
+    return cardElement;
   
 }
 
+
 function loadCards() {
   initialCards.forEach(function(item){
-    createCard(item.name, item.link)
+    const card=createCard(item.name, item.link)
     console.log(initialCards)
-    pressLike();
-    deleteCard();
-    openFullPhoto()
+    placesContainer.prepend(card);
   });
   }
   loadCards()
-
-
-function pressLike() {
-    const like=document.querySelector('.element__button-like');
-    like.addEventListener('click', function(evt) {
-      evt.preventDefault();
-      const eventTarget=evt.target
-      eventTarget.classList.toggle('element__button-like_active')
-    })}
-    ;
-
-function deleteCard() {
-      const deleteBtn=document.querySelector('.element__button-delete');
-      deleteBtn.addEventListener('click', function(evt) {
-        evt.preventDefault();
-        let card = document.querySelector('.element');
-        evt.target.closest('.element').remove();
-      })
-      };
-      
-      
-      
-function openFullPhoto() {
-        const imageClick = document.querySelector('.element__image-click')
-        const imageFull = document.querySelector('.popup__image-photo')
-        const imageCaption = document.querySelector('.popup__image-title')
-        const popupPhoto = document.querySelector('.popup__image')
-        imageClick.addEventListener('click', function(evt) {
-        console.log('нажато');
-        imageFull.src=evt.target.src;
-        imageFull.alt=evt.target.closest('.element__image').alt
-        imageCaption.textContent=evt.target.closest('.element__image').alt;
-        openPopup(popupPhoto);  
-      })
-
-
-
-
 
 
 
@@ -104,8 +98,6 @@ popupOpenBtn.addEventListener('click', function() {
 })
 
 
-
-
 formProfileEdit.addEventListener('submit', function(evt) {
         evt.preventDefault (); 
         profileName.textContent = inputName.value;
@@ -115,7 +107,6 @@ formProfileEdit.addEventListener('submit', function(evt) {
 ) 
 
  
-
 addClsBtn.addEventListener('click', function() {
   closePopup(addPopup);
 });
@@ -126,23 +117,19 @@ additionOpnBtn.addEventListener('click', function() {
 })
 
 
-
 addFormElement.addEventListener('submit', function(evt) {
   evt.preventDefault();
   if (addName.value !== "" || addLink.value !== "") {
     closePopup(addPopup);
-    createCard(addName.value, addLink.value) }
+    const newCard = createCard(addName.value, addLink.value)
+  placesContainer.prepend(newCard) }
       addFormElement.reset()
-      pressLike()
-      deleteCard();
-      openFullPhoto()
+   
      });
 
 
 
-popupPhotoClsBtn.addEventListener('click', function(evt) {
-  closePopup(popupPhoto);
-})
 
-}
+
+
 
