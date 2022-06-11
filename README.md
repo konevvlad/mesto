@@ -26,3 +26,6 @@ _________________________
 
 UPD.
 https://konevvlad.github.io/mesto/ -- ссылка на GHPages
+
+
+
