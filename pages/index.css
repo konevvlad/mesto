@@ -12,10 +12,8 @@
 @import url(../blocks/header/__logo/header__logo.css);
 @import url(../blocks/profile/profile.css);
 @import url(../blocks/profile/__title/profile__title.css);
-@import url(../blocks/profile/__add-button-image/profile__add-button-image.css);
+@import url(../../mesto/blocks/profile/__add-button/profile__add-button.css);
 @import url(../blocks/profile/__add-button/profile__add-button.css);
-@import url(../blocks/profile/__avatar/profile__avatar.css);
-@import url(../blocks/profile/__edit-button-image/profile__edit-button-image.css);
 @import url(../blocks/profile/__edit-button/profile__edit-button.css);
 @import url(../blocks/profile/__name/profile__name.css);
 @import url(../blocks/profile/__photo/profile__photo.css);
@@ -32,19 +30,16 @@
 @import url(../blocks/popup/__overlay/popup__overlay.css);
 @import url(../blocks/popup/__editing-form/popup__edititng-form.css);
 @import url(../blocks/popup/__close-button/popup__close-button.css);
-@import url(../blocks/popup/__close-button-image/popup__close-button-image.css);
 @import url(../blocks/popup/_active/popup_active.css);
 @import url(../blocks/popup/__profile-input/__profile-input.css);
 @import url(../blocks/profile/__info/profile__info.css);
 @import url(../blocks/popup/__addition-close-button/popup__addition-close-button.css);
 @import url(../blocks/popup/__addition-editing-form/popup__addition-edititng-form.css);
-@import url(../blocks/popup/__addition-overlay/popup__addition-overlay.css);
 @import url(../blocks/popup/__addition-profile-input/popup__addition-profile-input.css);
 @import url(../blocks/popup/__addition-profile-input/_subtitle/popup__addition-profile-input_subtitle.css);
 @import url(../blocks/popup/__addition-profile-input/_title/popup__addition-profile-input_title.css);
 @import url(../blocks/popup/__addition-save-button/popup__addition-save-button.css);
 @import url(../blocks/popup/__addition-title/popup__addition-title.css);
-@import url(../blocks/popup/__addition-window/popup__addition-window.css);
 @import url(../blocks/popup/__addition/popup__addition.css);
 @import url(../blocks/element/__image-click/element__image-click.css);
 @import url(../blocks/popup/__image-window/popup__image-window.css);
@@ -53,7 +48,7 @@
 @import url(../blocks/popup/__image-overlay/popup__image-overlay.css);
 @import url(../blocks/popup/__image-close-button/popup__image-close-button.css);
 @import url(../blocks/popup/__image-active/popup__image-active.css);
-
+@import url(../blocks/popup/__image-overlay/popup__image-overlay.css);
 
 
 

@@ -16,30 +16,31 @@ const formProfileEdit = document.querySelector('.popup__editing-form');
 const addFormElement=document.querySelector('.popup__addition-editing-form');
 const popupPhotoClsBtn = document.querySelector('.popup__image-close-button');
 const placesContainer=document.querySelector('.elements');
+const popupPhoto = document.querySelector('.popup__image');
 const deleteCard = function(evt) {
-  evt.preventDefault();  
-  let card = document.querySelector('.element');
   evt.target.closest('.element').remove();
 };
 
 const pressLike = function(evt) {
-  evt.preventDefault();
   const eventTarget=evt.target
   eventTarget.classList.toggle('element__button-like_active')
 };
+
+document.addEventListener('click', function(evt) {
+  if (evt.target.classList.contains('popup__image-close-button'))
+  closePopup(popupPhoto)
+})
 
 const openFullPhoto = function(evt) {
         
   const imageFull = document.querySelector('.popup__image-photo')
   const imageCaption = document.querySelector('.popup__image-title')
-  const popupPhoto = document.querySelector('.popup__image');
+  
   imageFull.src=evt.target.src;
-  imageFull.alt=evt.target.closest('.element__image').alt
-  imageCaption.textContent=evt.target.closest('.element__image').alt;
+  imageFull.alt=evt.target.alt
+  imageCaption.textContent=evt.target.alt;
   openPopup(popupPhoto);  
-  popupPhotoClsBtn.addEventListener('click', function(evt) {
-    closePopup(popupPhoto);
-  })
+
 };
 
 
@@ -65,8 +66,6 @@ function createCard(name, link) {
       const imageClick = cardElement.querySelector('.element__image-click');
       imageClick.addEventListener('click', openFullPhoto);
 
-
-
     return cardElement;
   
 }
@@ -75,7 +74,6 @@ function createCard(name, link) {
 function loadCards() {
   initialCards.forEach(function(item){
     const card=createCard(item.name, item.link)
-    console.log(initialCards)
     placesContainer.prepend(card);
   });
   }
@@ -122,7 +120,8 @@ addFormElement.addEventListener('submit', function(evt) {
   if (addName.value !== "" || addLink.value !== "") {
     closePopup(addPopup);
     const newCard = createCard(addName.value, addLink.value)
-  placesContainer.prepend(newCard) }
+    placesContainer.prepend(newCard)
+    }
       addFormElement.reset()
    
      });
