@@ -1,29 +1,11 @@
 .popup__image-photo {
     display: flex;
     flex-direction: column;
-    width: max-content;
-    height: max-content;
-    max-width: 900px;
-    max-height: 600px;
+    width: min-content;
+    height: min-content;
+    max-width: 75vw;
+    max-height: 75vh;
     background-color: white;
     z-index: 11;
-    
-}
-
-@media screen and (max-width:600px) {
-    .popup__image-photo {
-        max-width:calc(500/600*100vw);
-        max-height:calc(400/600*100vw);
-        
-    }
-    
-}
-
-@media screen and (max-width:320px) {
-    .popup__image-photo {
-        max-width:calc(260/320*100vw);
-        max-height:calc(300/320*100vw);
-        
-    }
     
 }
