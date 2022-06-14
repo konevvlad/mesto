@@ -27,7 +27,7 @@ const pressLike = function(evt) {
 };
 
 popupPhotoClsBtn.addEventListener('click', function(evt) {
-  if (evt.target.classList.contains('popup__image-close-button'))
+  evt.target.classList.contains('popup__image-close-button')
   closePopup(popupPhoto)
 })
 
@@ -37,7 +37,7 @@ const openFullPhoto = function(evt) {
   const imageCaption = document.querySelector('.popup__image-title')
   
   imageFull.src=evt.target.src;
-  imageFull.style.objectFit='contain';
+  imageFull.style.objectFit='scale-down';
   imageFull.alt=evt.target.alt
   imageCaption.textContent=evt.target.alt;
   openPopup(popupPhoto);  
