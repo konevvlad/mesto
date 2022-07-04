@@ -1,10 +1,9 @@
 .popup__image-photo {
     display: flex;
     flex-direction: column;
-    width: min-content;
-    height: min-content;
     max-width: 75vw;
     max-height: 75vh;
+    object-fit: scale-down;
     background-color: white;
     z-index: 11;
     
