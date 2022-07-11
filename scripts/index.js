@@ -20,10 +20,7 @@ const popupPhoto = document.querySelector('.popup__image');
 const elementTemplate=document.querySelector('#card-element').content;
 const imageFull = document.querySelector('.popup__image-photo');
 const imageCaption = document.querySelector('.popup__image-title');
-<<<<<<< HEAD
 
-=======
->>>>>>> ce89dd61631bfec07393db44e04c011a99b52854
 const deleteCard = function(evt) {
   evt.target.closest('.element').remove();
 };
