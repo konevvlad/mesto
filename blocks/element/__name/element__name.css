@@ -12,3 +12,32 @@
     overflow: hidden;
     max-width: 195px;
 }
+
+@media screen and (max-width:900px) {
+    .element__name {
+    max-width: 150px;
+    }
+    
+}
+
+@media screen and (max-width:660px) {
+    .element__name {
+        max-width: 110px;
+        }
+    
+}
+
+@media screen and (max-width:360px) {
+    .element__name {
+        max-width: 90px;
+        }
+    
+}
+
+
+@media screen and (max-width:320px) {
+    .element__name {
+        max-width: 160px;
+        }
+    
+}
