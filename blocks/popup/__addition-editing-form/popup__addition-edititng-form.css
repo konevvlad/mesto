@@ -12,10 +12,12 @@
     .popup__addition-editing-form {
         width:calc(282/600*100vw);
         height:calc(322/600*100vw);
-        
+        margin-top: auto;
     }
     
 }
+
+
 
 
 

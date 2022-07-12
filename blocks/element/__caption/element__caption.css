@@ -11,16 +11,8 @@
     padding-left: 21px;
 }
 
-@media screen and (max-width:900px) {
-    .element__caption {
-    height: calc(100% - calc(282/900*100vw));
-    padding-right: calc(15/900*100vw);
-    padding-left: calc(21/900*100vw);
-    }
-    
-}
 
-@media screen and (max-width:660px) {
+@media screen and (max-width:850px) {
     .element__caption {
     height: calc(100% - calc(282/660*100vw));
     padding-right: calc(15/660*100vw);

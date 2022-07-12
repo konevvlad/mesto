@@ -4,14 +4,8 @@
     margin: 0;
 }
 
-@media screen and (max-width: 900px) {
-    .element__image {
-        height: calc(282/900*100vw);
-    }
-    
-}
 
-@media screen and (max-width: 660px) {
+@media screen and (max-width: 850px) {
     .element__image {
         height: calc(282/660*100vw);
     }

@@ -12,18 +12,18 @@
 @media screen and (max-width:900px) {
     .elements {
         transition: 0.3s linear;
-        grid-template-columns: repeat(3, calc(282/900*100vw));
-        grid-template-rows: repeat(2, calc(361/900*100vw));
-        grid-auto-rows: calc(361/900*100vw);
-        row-gap: calc(20/900*100vw);
-        column-gap: calc(17/900*100vw);
+        grid-template-columns: repeat(3, 282px);
+        grid-template-rows: repeat(2, 361px);
+        grid-auto-rows: 361px;
+        column-gap: 3px;
+        row-gap: 20px;
         padding: calc(46/900*100vw) calc(10/900*100vw) 0 calc(10/900*100vw);
         
     }
     
 }
 
-@media screen and (max-width:660px) {
+@media screen and (max-width:850px) {
     .elements {
         grid-template-columns: repeat(2, calc(282/660*100vw));
         grid-template-rows: repeat(3, calc(361/660*100vw));
