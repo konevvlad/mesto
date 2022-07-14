@@ -1,5 +1,5 @@
 .popup__window {
-    position: absolute;
+    position: fixed;
     width:470px;
     height:370px;
     z-index: 10;
