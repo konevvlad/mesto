@@ -2,14 +2,10 @@
     margin: 50px 36px 0 36px;
 }
 
-@media screen and (max-width:600px) {
-    .popup__addition-profile-input_title {
-        margin: calc(70/600*100vw) calc(22/600*100vw) 0 calc(22/600*100vw);
-    }
-}
 
-@media screen and (max-width:320px) {
+
+@media screen and (max-width:660px) {
     .popup__addition-profile-input_title {
-        margin: calc(70/320*100vw) calc(22/320*100vw) 0 calc(22/320*100vw);
+        margin: 70px 22px 0 22px;
     }
 }

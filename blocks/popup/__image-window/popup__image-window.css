@@ -3,41 +3,10 @@
     width:min-content;
     height:max-content;
     z-index: 10;
-    top: 50px;
-    left: 0;
-    right: 0;
-    margin: auto;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
 
 
 }
 
-
-@media screen and (max-width:900px) {
-    .popup__image-window  {
-        top: calc(150/900*100vw);
-        
-        
-    }
-    
-}
-
-
-@media screen and (max-width:600px) {
-    .popup__image-window  {
-        top: calc(150/600*100vw);
-        
-
-        
-    }
-    
-}
-
-@media screen and (max-width:400px) {
-    .popup__image-window  {
-        top: calc(100/320*100vw);
-        
-
-        
-    }
-    
-}
