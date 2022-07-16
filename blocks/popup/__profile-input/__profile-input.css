@@ -21,4 +21,27 @@
         line-height: 17px;
         height: 30px;
     }
+    
 }
+
+
+.popup__profile-input_type_error {
+    border-bottom: 1px red solid;
+}
+
+
+.popup__profile-input_error{
+    visibility: hidden;
+}
+
+.popup__profile-input_error_active {
+    visibility:visible;
+    margin: 5px auto auto 36px;
+    font-family: 'Inter', 'Arial', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 15px;
+    color: red;
+};
+

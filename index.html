@@ -52,11 +52,13 @@
     <div class="popup__overlay"></div>
      <div class="popup__window">
         <button class="popup__close-button"></button>
-        <form class="popup__editing-form">
+        <form class="popup__editing-form form">
             <h2 class="popup__title">Редактировать профиль</h2>
-            <input type='text' id="enter-name" class="popup__profile-input popup__profile-input_title">
-            <input type='text' class="popup__profile-input popup__profile-input_subtitle">
-            <button type="submit" class="popup__save-button">Сохранить</button>
+            <input type='text' id="enter-name" class="popup__profile-input popup__profile-input_title form__input" minlength="2" maxlength="40" required>
+            <span class="popup__profile-input_title_error enter-name-error"></span>
+            <input type='text' id='enter-job' class="popup__profile-input popup__profile-input_subtitle form__input" minlength="2" maxlength="200" required>
+            <span class="popup__profile-input_subtitle_error enter-job-error"></span>
+            <button type="submit" class="popup__save-button submit-button">Сохранить</button>
         </form>
     </div>
 </div>
@@ -66,11 +68,13 @@
     <div class="popup__overlay"></div>
      <div class="popup__window">
         <button class="popup__addition-close-button"></button>
-        <form class="popup__addition-editing-form">
+        <form class="popup__addition-editing-form form">
             <h2 class="popup__addition-title">Новое место</h2>
-            <input type='text' class="popup__addition-profile-input popup__addition-profile-input_title" placeholder="Название">
-            <input type='text' class="popup__addition-profile-input popup__addition-profile-input_subtitle" placeholder="Ссылка на картинку">
-            <button type="submit" class="popup__addition-save-button">Добавить</button>
+            <input type='text' id="enter-title" class="popup__addition-profile-input popup__addition-profile-input_title form__input" placeholder="Название" minlength="2" maxlength="30" required>
+            <span class="popup__addition-input_title_error enter-title-error"></span>
+            <input id='enter-link' class="popup__addition-profile-input popup__addition-profile-input_subtitle form__input" placeholder="Ссылка на картинку" type="url" required >
+            <span class="popup__addition-input_subtitle_error enter-link-error"></span>
+            <button type="submit" class="popup__addition-save-button submit-button">Добавить</button>
         </form>
     </div>
 </div>

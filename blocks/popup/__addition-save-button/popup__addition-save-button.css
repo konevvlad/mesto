@@ -33,3 +33,11 @@
     transition: 0.3s linear;
     cursor:pointer;
 }
+
+.popup__addition-save-button_disabled {
+    opacity: 20%;
+    background-color:white;
+    color: rgba(0, 0, 0, 1);
+    border: rgba(0, 0, 0, 1) 1px solid;
+
+}
