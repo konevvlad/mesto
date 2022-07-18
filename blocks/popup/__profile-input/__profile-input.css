@@ -25,16 +25,16 @@
 }
 
 
-.popup__profile-input_type_error {
+.popup__input_type_error {
     border-bottom: 1px red solid;
 }
 
 
-.popup__profile-input_error{
+.popup__error{
     visibility: hidden;
 }
 
-.popup__profile-input_error_active {
+.popup__error_visible {
     visibility:visible;
     margin: 5px auto auto 36px;
     font-family: 'Inter', 'Arial', sans-serif;

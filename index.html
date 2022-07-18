@@ -49,32 +49,32 @@
 </footer>
 
 <div class="popup popup-profile">
-    <div class="popup__overlay"></div>
+    <div class="popup__overlay profile__overlay"></div>
      <div class="popup__window">
         <button class="popup__close-button"></button>
-        <form class="popup__editing-form form">
+        <form class="popup__editing-form popup__form" novalidate>
             <h2 class="popup__title">Редактировать профиль</h2>
-            <input type='text' id="enter-name" class="popup__profile-input popup__profile-input_title form__input" minlength="2" maxlength="40" required>
-            <span class="popup__profile-input_title_error enter-name-error"></span>
-            <input type='text' id='enter-job' class="popup__profile-input popup__profile-input_subtitle form__input" minlength="2" maxlength="200" required>
-            <span class="popup__profile-input_subtitle_error enter-job-error"></span>
-            <button type="submit" class="popup__save-button submit-button">Сохранить</button>
+            <input type='text' id="enter-name" class="popup__profile-input popup__profile-input_title popup__input" minlength="2" maxlength="40" required>
+            <span class="popup__profile-input_title_error enter-name-error popup__error"></span>
+            <input type='text' id='enter-job' class="popup__profile-input popup__profile-input_subtitle popup__input" minlength="2" maxlength="200" required>
+            <span class="popup__profile-input_subtitle_error enter-job-error popup__error"></span>
+            <button type="submit" class="popup__save-button popup__button">Сохранить</button>
         </form>
     </div>
 </div>
 
 
 <div class="popup popup-addition">
-    <div class="popup__overlay"></div>
+    <div class="popup__overlay place__overlay"></div>
      <div class="popup__window">
         <button class="popup__addition-close-button"></button>
-        <form class="popup__addition-editing-form form">
+        <form class="popup__addition-editing-form popup__form" novalidate>
             <h2 class="popup__addition-title">Новое место</h2>
-            <input type='text' id="enter-title" class="popup__addition-profile-input popup__addition-profile-input_title form__input" placeholder="Название" minlength="2" maxlength="30" required>
-            <span class="popup__addition-input_title_error enter-title-error"></span>
-            <input id='enter-link' class="popup__addition-profile-input popup__addition-profile-input_subtitle form__input" placeholder="Ссылка на картинку" type="url" required >
-            <span class="popup__addition-input_subtitle_error enter-link-error"></span>
-            <button type="submit" class="popup__addition-save-button submit-button">Добавить</button>
+            <input type='text' id="enter-title" class="popup__addition-profile-input popup__addition-profile-input_title popup__input" placeholder="Название" minlength="2" maxlength="30" required>
+            <span class="popup__addition-input_title_error enter-title-error popup__error"></span>
+            <input id='enter-link' class="popup__addition-profile-input popup__addition-profile-input_subtitle popup__input" placeholder="Ссылка на картинку" type="url" required >
+            <span class="popup__addition-input_subtitle_error enter-link-error popup__error "></span>
+            <button type="submit" class="popup__addition-save-button popup__button">Добавить</button>
         </form>
     </div>
 </div>
@@ -92,4 +92,5 @@
 </body>
 <script src="./scripts/initial.js" type="text/javascript"></script>
 <script src="./scripts/index.js" type="text/javascript"></script>
+<script src="./scripts/validate.js" type="text/javascript"></script>
 </html>
