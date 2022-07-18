@@ -21,8 +21,8 @@ const elementTemplate=document.querySelector('#card-element').content;
 const imageFull = document.querySelector('.popup__image-photo');
 const imageCaption = document.querySelector('.popup__image-title');
 const imageOverlay = document.querySelector('.popup__image-overlay');
-const profileOverlay = document.querySelector('.profile__overlay');
-const placeOverlay = document.querySelector('.place__overlay')
+const profileOverlay = document.querySelector('.popup__profile-overlay');
+const placeOverlay = document.querySelector('.popup__place-overlay')
 
 const deleteCard = function(evt) {
   evt.target.closest('.element').remove();
