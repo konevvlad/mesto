@@ -52,7 +52,7 @@
     <div class="popup__overlay popup__profile-overlay"></div>
      <div class="popup__window">
         <button class="popup__close-button"></button>
-        <form class="popup__editing-form popup__form" novalidate>
+        <form class="popup__editing-form popup__form outclick">
             <h2 class="popup__title">Редактировать профиль</h2>
             <input type='text' id="enter-name" class="popup__profile-input popup__profile-input_title popup__input" minlength="2" maxlength="40" required>
             <span class="enter-name-error popup__error"></span>
@@ -68,7 +68,7 @@
     <div class="popup__overlay popup__place-overlay"></div>
      <div class="popup__window">
         <button class="popup__addition-close-button"></button>
-        <form class="popup__addition-editing-form popup__form" novalidate>
+        <form class="popup__addition-editing-form popup__form outclick" novalidate>
             <h2 class="popup__addition-title">Новое место</h2>
             <input type='text' id="enter-title" class="popup__addition-profile-input popup__addition-profile-input_title popup__input" placeholder="Название" minlength="2" maxlength="30" required>
             <span class="enter-title-error popup__error"></span>
@@ -81,7 +81,7 @@
 
 <div class="popup popup-image">
     <div class="popup__image-overlay"></div>
-     <div class="popup__image-window">
+     <div class="popup__image-window outclick">
         <button class="popup__image-close-button"></button>
         <img class="popup__image-photo" alt="photo">
         <h2 class="popup__image-title"></h2>

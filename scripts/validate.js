@@ -1,61 +1,76 @@
-const showInputError=function (formElement, inputElement, errorMessage)  {
+const validateSettings = {
+  formSelector: '.popup__form',
+  inputSelector: '.popup__input',
+  submitButtonSelector: '.popup__button',
+  inactiveButtonClass: 'popup__button_disabled',
+  inputErrorClass: 'popup__input_type_error',
+  errorClass: 'popup__error_visible'
+  
+};
+
+
+const showInputError=function (formElement, inputElement, errorMessage, settings)  {
     const errorElement = formElement.querySelector(`.${inputElement.id}-error`);
-    inputElement.classList.add('popup__input_type_error');
+    inputElement.classList.add(settings.inputErrorClass);
     errorElement.textContent = errorMessage;
-    errorElement.classList.add('popup__error_visible');
+    errorElement.classList.add(settings.errorClass);
   };
   
-  function hideInputError(formElement, inputElement) {
+function hideInputError(formElement, inputElement, settings) {
     const errorElement = formElement.querySelector(`.${inputElement.id}-error`);
-    inputElement.classList.remove('popup__input_type_error');
-    errorElement.classList.remove('popup__error_visible');
+    inputElement.classList.remove(settings.inputErrorClass);
+    errorElement.classList.remove(settings.errorClass);
     errorElement.textContent = '';
   };
 
 
-  const isValid = function(formElement, inputElement) {
+const isValid = function(formElement, inputElement, settings) {
     if (!inputElement.validity.valid) {
-      showInputError(formElement, inputElement, inputElement.validationMessage);
+      showInputError(formElement, inputElement, inputElement.validationMessage, settings);
     } else {
-      hideInputError(formElement, inputElement);
+      hideInputError(formElement, inputElement, settings);
     }
   };
 
-  const setEventListeners = function(formElement) {
-  const inputList = Array.from(formElement.querySelectorAll('.popup__input'));
-  const popupSaveButton = formElement.querySelector('.popup__button');
+  
+ 
   const hasInvalidInput = function(inputList) {
     return inputList.some(function(inputElement) {    
       return !inputElement.validity.valid;
     })
-  }; 
+  };
+
+  function toggleButtonState (inputList, buttonElement, settings) {
+    if (hasInvalidInput(inputList)) {
+        buttonElement.classList.add(settings.inactiveButtonClass);
+        buttonElement.disabled=true;
+      } else {
+        buttonElement.classList.remove(settings.inactiveButtonClass);
+        buttonElement.disabled=false;
+        }
+        };   
 
 
-const toggleButtonState = function(inputList, buttonElement) {
-if (hasInvalidInput(inputList)) {
-  buttonElement.classList.add('popup__button_disabled');
-} else {
-  buttonElement.classList.remove('popup__button_disabled');
-}
-}; 
+const setEventListeners = function(formElement, settings) {
+  const inputList = Array.from(formElement.querySelectorAll(settings.inputSelector));
+  const popupSaveButton = formElement.querySelector(settings.submitButtonSelector);
 
-    inputList.forEach(function(inputElement){
-      inputElement.addEventListener('input', function(){
-        isValid(formElement, inputElement);
-        toggleButtonState(inputList, popupSaveButton);
+  inputList.forEach(function(inputElement){
+    inputElement.addEventListener('input', function(){
+       isValid(formElement, inputElement, settings);
+       toggleButtonState(inputList, popupSaveButton, settings);
+        });
       });
-    });
-  }; 
 
-  const enableValidation = function() {
-    const formList = Array.from(document.querySelectorAll('.popup__form'));
-        formList.forEach(function(formElement) {
-      formElement.addEventListener('submit', function(evt) {
-        evt.preventDefault();
-      });
-  
-      setEventListeners(formElement);
+    };
+
+
+  const enableValidation = function(settings) {
+  const formList = Array.from(document.querySelectorAll(settings.formSelector));
+   formList.forEach(function(formElement) {
+      setEventListeners(formElement, settings);
     });
   };
-  
-  enableValidation(); 
+
+
+enableValidation(validateSettings); 

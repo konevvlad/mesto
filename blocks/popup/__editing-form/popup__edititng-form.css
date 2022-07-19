@@ -2,10 +2,12 @@
     display: flex;
     flex-direction: column;
     width: 430px;
-    height: 330px;
+    min-height: 340px;
+    max-height: 390px;
     background-color: white;
     border-radius: 10px;
     z-index: 11;
+    border: none;
 }
 
 
@@ -18,3 +20,4 @@
     }
     
 }
+

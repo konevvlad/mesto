@@ -18,7 +18,7 @@
         font-size: 14px;
         line-height: 17px;
         height: 30px;
-    }
+    };
     
 }
 
@@ -29,16 +29,24 @@
 
 
 .popup__error{
+    margin: auto auto auto 38px;
     visibility: hidden;
 }
 
 .popup__error_visible {
     visibility:visible;
-    margin: 5px auto auto 36px;
     font-family: 'Inter', 'Arial', sans-serif;
     font-style: normal;
     font-weight: 400;
     font-size: 12px;
     line-height: 15px;
     color: red;
+}
+
+
+@media screen and (max-width:660px) {
+    .popup__error {
+        margin: 0 0 0 20px;
+    }
+    
 }

@@ -49,11 +49,21 @@ const openFullPhoto = function(evt) {
 
 function openPopup(popupProfileCard) {
   popupProfileCard.classList.add('popup_active');
+  document.addEventListener('keydown', closeByEsc)
 }
 
 function closePopup(popupProfileCard) {
   popupProfileCard.classList.remove('popup_active');
+  document.addEventListener('keydown', closeByEsc);
+  
 }
+
+function closeByEsc(evt) {
+  if (evt.key === 'Escape') {
+    const openedPopup = document.querySelector('.popup_active');
+    closePopup(openedPopup); 
+  }
+};
 
 function createCard(name, link) {
   
@@ -83,24 +93,6 @@ function loadCards() {
   }
   loadCards()
 
-
- function pressEscapePlace (evt) {
-    if (evt.key === 'Escape') {
-       closePopup(popupNewPlace)
-    }
-   }
-   
- function pressEscapeProfile (evt) {
-     if (evt.key === 'Escape') {
-        closePopup(popupProfileCard)
-     }
-    }
-   
-  function pressEscapeImage (evt) {
-     if (evt.key === 'Escape') {
-        closePopup(popupPhoto)
-     }
-    }
    
 popupPhotoClsBtn.addEventListener('click', function(evt) {
       closePopup(popupPhoto)
@@ -116,13 +108,7 @@ popupProfileCloseBtn.addEventListener('click', function() {
     
 });
 
-profileOverlay.addEventListener ('click', function(evt){;
-  closePopup(evt.currentTarget.parentNode);
-} );
-
-placeOverlay.addEventListener ('click', function(evt){;
-  closePopup(evt.currentTarget.parentNode);
-} );
+ 
 
 popupProfileOpenBtn.addEventListener('click', function() {
     inputName.value=profileName.textContent;
@@ -169,6 +155,11 @@ placeAdditionFormElement.addEventListener('submit', function(evt) {
 
 
 
-document.addEventListener ('keydown', pressEscapePlace);
-document.addEventListener ('keydown', pressEscapeProfile);
-document.addEventListener ('keydown', pressEscapeImage);
+     const popupList = document.querySelectorAll('.popup');
+     popupList.forEach(popup => {
+       popup.addEventListener('mousedown', (evt) => {
+         if (evt.target.classList.contains('popup') || evt.target.classList.contains('popup__close-button')) {
+            closePopup(popup)
+         }
+       })
+     });
