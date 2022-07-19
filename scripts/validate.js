@@ -9,6 +9,12 @@ const validateSettings = {
 };
 
 
+const hasInvalidInput = function(inputList) {
+  return inputList.some(function(inputElement) {    
+    return !inputElement.validity.valid;
+  })
+};
+
 const showInputError=function (formElement, inputElement, errorMessage, settings)  {
     const errorElement = formElement.querySelector(`.${inputElement.id}-error`);
     inputElement.classList.add(settings.inputErrorClass);
@@ -24,22 +30,6 @@ function hideInputError(formElement, inputElement, settings) {
   };
 
 
-const isValid = function(formElement, inputElement, settings) {
-    if (!inputElement.validity.valid) {
-      showInputError(formElement, inputElement, inputElement.validationMessage, settings);
-    } else {
-      hideInputError(formElement, inputElement, settings);
-    }
-  };
-
-  
- 
-const hasInvalidInput = function(inputList) {
-    return inputList.some(function(inputElement) {    
-      return !inputElement.validity.valid;
-    })
-  };
-
 function toggleButtonState (inputList, buttonElement, settings) {
     if (hasInvalidInput(inputList)) {
         buttonElement.classList.add(settings.inactiveButtonClass);
@@ -51,9 +41,24 @@ function toggleButtonState (inputList, buttonElement, settings) {
     };   
 
 
+const isValid = function(formElement, inputElement, settings) {
+    if (!inputElement.validity.valid) {
+      showInputError(formElement, inputElement, inputElement.validationMessage, settings);
+    } else {
+      hideInputError(formElement, inputElement, settings);
+    }
+  };
+
+  
+ 
+
+
+
+
 const setEventListeners = function(formElement, settings) {
   const inputList = Array.from(formElement.querySelectorAll(settings.inputSelector));
   const popupSaveButton = formElement.querySelector(settings.submitButtonSelector);
+  
 
      inputList.forEach(function(inputElement){
          inputElement.addEventListener('input', function(){
