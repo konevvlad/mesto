@@ -34,13 +34,13 @@ const isValid = function(formElement, inputElement, settings) {
 
   
  
-  const hasInvalidInput = function(inputList) {
+const hasInvalidInput = function(inputList) {
     return inputList.some(function(inputElement) {    
       return !inputElement.validity.valid;
     })
   };
 
-  function toggleButtonState (inputList, buttonElement, settings) {
+function toggleButtonState (inputList, buttonElement, settings) {
     if (hasInvalidInput(inputList)) {
         buttonElement.classList.add(settings.inactiveButtonClass);
         buttonElement.disabled=true;
@@ -48,24 +48,24 @@ const isValid = function(formElement, inputElement, settings) {
         buttonElement.classList.remove(settings.inactiveButtonClass);
         buttonElement.disabled=false;
         }
-        };   
+    };   
 
 
 const setEventListeners = function(formElement, settings) {
   const inputList = Array.from(formElement.querySelectorAll(settings.inputSelector));
   const popupSaveButton = formElement.querySelector(settings.submitButtonSelector);
 
-  inputList.forEach(function(inputElement){
-    inputElement.addEventListener('input', function(){
-       isValid(formElement, inputElement, settings);
-       toggleButtonState(inputList, popupSaveButton, settings);
+     inputList.forEach(function(inputElement){
+         inputElement.addEventListener('input', function(){
+         isValid(formElement, inputElement, settings);
+         toggleButtonState(inputList, popupSaveButton, settings);
         });
       });
 
     };
 
 
-  const enableValidation = function(settings) {
+const enableValidation = function(settings) {
   const formList = Array.from(document.querySelectorAll(settings.formSelector));
    formList.forEach(function(formElement) {
       setEventListeners(formElement, settings);
