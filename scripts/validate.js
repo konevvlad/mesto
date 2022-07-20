@@ -32,8 +32,9 @@ function hideInputError(formElement, inputElement, settings) {
 
 function toggleButtonState (inputList, buttonElement, settings) {
   
-    if (hasInvalidInput(inputList)) {
+    if (hasInvalidInput(inputList) || inputList.value ==='') {
         buttonElement.classList.add(settings.inactiveButtonClass);
+        buttonElement.disabled=true;
       } else {
         buttonElement.classList.remove(settings.inactiveButtonClass);
         buttonElement.disabled=false;
@@ -58,7 +59,6 @@ const isValid = function(formElement, inputElement, settings) {
 const setEventListeners = function(formElement, settings) {
   const inputList = Array.from(formElement.querySelectorAll(settings.inputSelector));
   const popupSaveButton = formElement.querySelector(settings.submitButtonSelector);
-  
 
      inputList.forEach(function(inputElement){
          inputElement.addEventListener('input', function(){

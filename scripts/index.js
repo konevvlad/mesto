@@ -50,8 +50,8 @@ const openFullPhoto = function(evt) {
 
 function openPopup(popupProfileCard) {
   popupProfileCard.classList.add('popup_active');
-  popupAdditionSaveButton.disabled=true;
-  popupAdditionSaveButton.classList.add('popup__button_disabled');
+  // popupAdditionSaveButton.disabled=true;
+  // popupAdditionSaveButton.classList.add('popup__button_disabled');
   document.addEventListener('keydown', closeByEsc);
 
 }
@@ -149,6 +149,7 @@ popupNewPlaceClsBtn.addEventListener('click', function() {
   closePopup(popupNewPlace);
   
   
+  
 });
 
 popupNewPlaceOpnBtn.addEventListener('click', function() {
@@ -162,7 +163,9 @@ placeAdditionFormElement.addEventListener('submit', function(evt) {
     closePopup(popupNewPlace);
     const newCard = createCard(placeName.value, placeLink.value)
     placesContainer.prepend(newCard)
-      placeAdditionFormElement.reset()
+      placeAdditionFormElement.reset();
+      popupAdditionSaveButton.disabled=true;
+      popupAdditionSaveButton.classList.add('popup__button_disabled');
    
      });
 
