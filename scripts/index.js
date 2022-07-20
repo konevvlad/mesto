@@ -22,7 +22,8 @@ const imageFull = document.querySelector('.popup__image-photo');
 const imageCaption = document.querySelector('.popup__image-title');
 const imageOverlay = document.querySelector('.popup__image-overlay');
 const profileOverlay = document.querySelector('.popup__profile-overlay');
-const placeOverlay = document.querySelector('.popup__place-overlay')
+const placeOverlay = document.querySelector('.popup__place-overlay');
+const popupAdditionSaveButton = document.querySelector('.popup__addition-save-button');
 
 const deleteCard = function(evt) {
   evt.target.closest('.element').remove();
@@ -49,12 +50,15 @@ const openFullPhoto = function(evt) {
 
 function openPopup(popupProfileCard) {
   popupProfileCard.classList.add('popup_active');
-  document.addEventListener('keydown', closeByEsc)
+  popupAdditionSaveButton.disabled=true;
+  popupAdditionSaveButton.classList.add('popup__button_disabled');
+  document.addEventListener('keydown', closeByEsc);
+
 }
 
 function closePopup(popupProfileCard) {
   popupProfileCard.classList.remove('popup_active');
-  document.addEventListener('keydown', closeByEsc);
+  document.removeEventListener('keydown', closeByEsc);
   
   
 }
