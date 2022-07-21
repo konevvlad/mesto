@@ -30,6 +30,10 @@
 
 .popup__error{
     visibility: hidden;
+    height: 35px;
+    width: auto;
+    margin: 5px auto -35px 38px;
+
 }
 
 .popup__error_visible {
@@ -40,13 +44,15 @@
     font-size: 12px;
     line-height: 15px;
     color: red;
-    margin: 2px auto -15px 38px;
+    z-index: 999;
+   
 }
 
 
 @media screen and (max-width:660px) {
     .popup__error {
-        margin: 0 0 0 20px;
+        margin: 5px auto -35px 20px;
     }
+
     
 }
