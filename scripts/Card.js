@@ -1,6 +1,8 @@
 import * as constants from './constants.js';
 
 
+import {openPopup} from './index.js' ;
+
 export default class Card {
     constructor(data, templateSelector) {
     this._name=data.name;
@@ -8,8 +10,8 @@ export default class Card {
     this._isLiked=false;
     this._templateSelector=templateSelector
     }
-  
-  
+
+
     _getTemplate() {
       const cardElement = document
       .querySelector( this._templateSelector)
@@ -28,35 +30,33 @@ export default class Card {
       return this._element;
   
     }
-  
+    
     _handleOpenCard() {
       constants.imageFull.src=this._image
       constants.imageFull.alt=this._name
       constants.imageCaption.textContent=this._name;
-      constants.popupPhoto.classList.add('popup_active')
+      openPopup(constants.popupPhoto);
     }
   
     _handleCloseCard() {
       constants.imageFull.src='';
       constants.imageFull.alt='';
       constants.imageCaption.textContent='';
-      constants.popupPhoto.classList.remove('popup_active')
     }
   
     _deleteCard() {
       this._element.remove();
     }
-  
     _pressLike() {
       this._element.querySelector('.element__button-like').classList.toggle('element__button-like_active');
     }
   
     _setEventListeners() {
       this._element.querySelector('.element__image').addEventListener('click', () => {
-        this._handleOpenCard()
+        this._handleOpenCard();
       })
       constants.popupPhotoClsBtn.addEventListener('click', () => {
-        this._handleCloseCard()
+        this._handleCloseCard();
       })
       this._element.querySelector('.element__button-delete').addEventListener('click', ()=> {
         this._deleteCard()

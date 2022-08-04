@@ -24,3 +24,4 @@ export const profileOverlay = document.querySelector('.popup__profile-overlay');
 export const placeOverlay = document.querySelector('.popup__place-overlay');
 export const popupAdditionSaveButton = document.querySelector('.popup__addition-save-button');
 export const deleteBtn=document.querySelector('.element__button-delete');
+export const popupProfileCard=document.querySelector('.popup-profile');

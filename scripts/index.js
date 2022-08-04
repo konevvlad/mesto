@@ -3,14 +3,17 @@ import {initialCards} from './initial.js';
 import * as constants from './constants.js'
 
 
-
-
-
 initialCards.forEach((item) => {
   const card= new Card(item, '.card-element');
   const cardElement = card.generateCard();
   document.querySelector('.elements').prepend(cardElement);
 });
+
+function createCard(data) {
+    const card = new Card(data, '.card-element')
+    const cardElement = card.generateCard();
+    return cardElement;
+    }
 
 constants.placeAdditionFormElement.addEventListener('submit', function(evt) {
   evt.preventDefault();
@@ -20,17 +23,13 @@ constants.placeAdditionFormElement.addEventListener('submit', function(evt) {
         name: constants.placeName.value,
         link: constants.placeLink.value,
       };
-    console.log(cardData)
-    const card = new Card(cardData, '.card-element' )
-    const cardElement = card.generateCard();
-    document.querySelector('.elements').prepend(cardElement);
+  const newCard = createCard(cardData)
+    document.querySelector('.elements').prepend(newCard);
     constants.placeAdditionFormElement.reset();
-    constants.popupAdditionSaveButton.disabled=true;
-    constants.popupAdditionSaveButton.classList.add('popup__button_disabled');
    
-     });
+   });
 
-function openPopup(popupProfileCard) {
+export function openPopup(popupProfileCard) {
   popupProfileCard.classList.add('popup_active');
   document.addEventListener('keydown', closeByEsc);
 }
@@ -57,26 +56,29 @@ popupList.forEach(popup => {
 });
 
 constants.imageOverlay.addEventListener('click', function(evt) {
-      closePopup(popupPhoto); 
+      closePopup(constants.popupPhoto); 
 })
 
-constants.popupProfileCloseBtn.addEventListener('click', function() {
-    closePopup(popupProfileCard);
-});
 
+constants.popupProfileCloseBtn.addEventListener('click', function() {
+    closePopup(constants.popupProfileCard);
+});
+constants.popupPhotoClsBtn.addEventListener('click', () => {
+  closePopup(constants.popupPhoto);
+})
 
 constants.popupProfileOpenBtn.addEventListener('click', function() {
-  constants.inputName.value=profileName.textContent;
-  constants.inputJob.value=profileJob.textContent;
-    openPopup(popupProfileCard)  
+  constants.inputName.value=constants.profileName.textContent;
+  constants.inputJob.value=constants.profileJob.textContent;
+    openPopup(constants.popupProfileCard)  
 })
 
 
 constants.formProfileEdit.addEventListener('submit', function(evt) {
         evt.preventDefault (); 
-        constants.profileName.textContent = inputName.value;
-        constants.profileJob.textContent = inputJob.value;
-        closePopup(popupProfileCard);
+        constants.profileName.textContent = constants.inputName.value;
+        constants.profileJob.textContent = constants.inputJob.value;
+        closePopup(constants.popupProfileCard);
     }
 );
 
