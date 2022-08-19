@@ -8,7 +8,10 @@ export default class Card {
     this._name=data.name;
     this._image=data.link;
     this._isLiked=false;
-    this._templateSelector=templateSelector
+    this._templateSelector=templateSelector;
+    this._element=this._getTemplate();
+    this._cardImage=this._element.querySelector('.element__image');
+    this._likeButton=this._element.querySelector('.element__button-like');
     }
 
 
@@ -22,11 +25,10 @@ export default class Card {
     }
     
     generateCard() {
-      this._element=this._getTemplate();
-      this._setEventListeners();
       this._element.querySelector('.element__name').textContent =this._name;
-      this._element.querySelector('.element__image').src=this._image;
-      this._element.querySelector('.element__image').alt=this._name;
+      this._cardImage.src=this._image;
+      this._cardImage.alt=this._name;
+      this._setEventListeners();
       return this._element;
   
     }
@@ -37,31 +39,24 @@ export default class Card {
       constants.imageCaption.textContent=this._name;
       openPopup(constants.popupPhoto);
     }
-  
-    _handleCloseCard() {
-      constants.imageFull.src='';
-      constants.imageFull.alt='';
-      constants.imageCaption.textContent='';
-    }
+
   
     _deleteCard() {
       this._element.remove();
     }
     _pressLike() {
-      this._element.querySelector('.element__button-like').classList.toggle('element__button-like_active');
+      this._likeButton.classList.toggle('element__button-like_active');
     }
   
     _setEventListeners() {
       this._element.querySelector('.element__image').addEventListener('click', () => {
         this._handleOpenCard();
       })
-      constants.popupPhotoClsBtn.addEventListener('click', () => {
-        this._handleCloseCard();
-      })
+
       this._element.querySelector('.element__button-delete').addEventListener('click', ()=> {
         this._deleteCard()
       })
-      this._element.querySelector('.element__button-like').addEventListener('click', () => {
+      this._likeButton.addEventListener('click', () => {
         this._pressLike()
       })
     }

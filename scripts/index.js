@@ -2,11 +2,12 @@ import Card from './Card.js';
 import {initialCards} from './initial.js';
 import * as constants from './constants.js'
 
+const elements = document.querySelector('.elements');
+const inputs = Array.from(document.querySelectorAll('.popup__input'));
+
 
 initialCards.forEach((item) => {
-  const card= new Card(item, '.card-element');
-  const cardElement = card.generateCard();
-  document.querySelector('.elements').prepend(cardElement);
+  elements.prepend(createCard(item));
 });
 
 function createCard(data) {
@@ -24,18 +25,28 @@ constants.placeAdditionFormElement.addEventListener('submit', function(evt) {
         link: constants.placeLink.value,
       };
   const newCard = createCard(cardData)
-    document.querySelector('.elements').prepend(newCard);
-    constants.placeAdditionFormElement.reset();
+    elements.prepend(newCard);
+    evt.target.reset();
    
    });
 
-export function openPopup(popupProfileCard) {
-  popupProfileCard.classList.add('popup_active');
+export function openPopup(popup) {
+  popup.classList.add('popup_active');
   document.addEventListener('keydown', closeByEsc);
+  let event = new Event('input');
+  constants.placeName.dispatchEvent(event);
+
+  inputs.forEach((element) => {
+    element.dispatchEvent(event);
+})
 }
 
-function closePopup(popupProfileCard) {
-  popupProfileCard.classList.remove('popup_active');
+
+function closePopup(popup) {
+  popup.classList.remove('popup_active');
+  constants.imageFull.src='';
+  constants.imageFull.alt='';
+  constants.imageCaption.textContent='';
   document.removeEventListener('keydown', closeByEsc);
 }
 
@@ -54,11 +65,6 @@ popupList.forEach(popup => {
     }
   })
 });
-
-constants.imageOverlay.addEventListener('click', function(evt) {
-      closePopup(constants.popupPhoto); 
-})
-
 
 constants.popupProfileCloseBtn.addEventListener('click', function() {
     closePopup(constants.popupProfileCard);
