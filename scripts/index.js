@@ -1,13 +1,19 @@
 import Card from './Card.js';
 import {initialCards} from './initial.js';
-import * as constants from './constants.js'
+import * as constants from './constants.js';
+import FormValidator from "./FormValidator.js";
 
-const elements = document.querySelector('.elements');
-const inputs = Array.from(document.querySelectorAll('.popup__input'));
 
+
+
+constants.getForms.forEach((formElement) => {
+  const cardForValidation = new FormValidator(constants.validateSettings, formElement);
+  cardForValidation.enableValidation();
+  
+});
 
 initialCards.forEach((item) => {
-  elements.prepend(createCard(item));
+  constants.elements.prepend(createCard(item));
 });
 
 function createCard(data) {
@@ -25,7 +31,7 @@ constants.placeAdditionFormElement.addEventListener('submit', function(evt) {
         link: constants.placeLink.value,
       };
   const newCard = createCard(cardData)
-    elements.prepend(newCard);
+    constants.elements.prepend(newCard);
     evt.target.reset();
    
    });
@@ -33,20 +39,11 @@ constants.placeAdditionFormElement.addEventListener('submit', function(evt) {
 export function openPopup(popup) {
   popup.classList.add('popup_active');
   document.addEventListener('keydown', closeByEsc);
-  let event = new Event('input');
-  constants.placeName.dispatchEvent(event);
 
-  inputs.forEach((element) => {
-    element.dispatchEvent(event);
-})
 }
-
 
 function closePopup(popup) {
   popup.classList.remove('popup_active');
-  constants.imageFull.src='';
-  constants.imageFull.alt='';
-  constants.imageCaption.textContent='';
   document.removeEventListener('keydown', closeByEsc);
 }
 
@@ -57,21 +54,25 @@ function closeByEsc(evt) {
   }
 };
 
-const popupList = document.querySelectorAll('.popup');
-popupList.forEach(popup => {
+
+constants.popupList.forEach(popup => {
   popup.addEventListener('mousedown', (evt) => {
     if (evt.target.classList.contains('popup')) {
-       closePopup(popup.closest('.popup'))
+       closePopup(popup)
     }
   })
 });
 
-constants.popupProfileCloseBtn.addEventListener('click', function() {
-    closePopup(constants.popupProfileCard);
+
+
+
+
+
+constants.closeButtons.forEach((button) => {
+  const popup = button.closest('.popup');
+  button.addEventListener('click', () => closePopup(popup));
 });
-constants.popupPhotoClsBtn.addEventListener('click', () => {
-  closePopup(constants.popupPhoto);
-})
+
 
 constants.popupProfileOpenBtn.addEventListener('click', function() {
   constants.inputName.value=constants.profileName.textContent;
@@ -88,14 +89,16 @@ constants.formProfileEdit.addEventListener('submit', function(evt) {
     }
 );
 
- 
-constants.popupNewPlaceClsBtn.addEventListener('click', function() {
-  closePopup(constants.popupNewPlace);
-});
 
 constants.popupNewPlaceOpnBtn.addEventListener('click', function() {
-  openPopup(constants.popupNewPlace);   
+  openPopup(constants.popupNewPlace); 
+  
+  
+    
 })
+
+
+
 
 
 

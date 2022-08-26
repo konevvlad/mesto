@@ -49,7 +49,7 @@ export default class Card {
     }
   
     _setEventListeners() {
-      this._element.querySelector('.element__image').addEventListener('click', () => {
+      this._cardImage.addEventListener('click', () => {
         this._handleOpenCard();
       })
 

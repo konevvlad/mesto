@@ -25,3 +25,21 @@ export const placeOverlay = document.querySelector('.popup__place-overlay');
 export const popupAdditionSaveButton = document.querySelector('.popup__addition-save-button');
 export const deleteBtn=document.querySelector('.element__button-delete');
 export const popupProfileCard=document.querySelector('.popup-profile');
+
+
+export const popupList = document.querySelectorAll('.popup');
+export const elements = document.querySelector('.elements');
+export const closeButtons = document.querySelectorAll('.popup__close-button');
+export const validateSettings = {
+  formSelector: '.popup__form',
+  inputSelector: '.popup__input',
+  submitButtonSelector: '.popup__button',
+  inactiveButtonClass: 'popup__button_disabled',
+  inputErrorClass: 'popup__input_type_error',
+  errorClass: 'popup__error_visible'
+  
+};
+export const validateForm = (settings) => {
+  return Array.from(document.querySelectorAll(settings.formSelector));
+}
+export const getForms = validateForm(validateSettings);
