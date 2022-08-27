@@ -60,14 +60,12 @@ export default class FormValidator {
      
        });
      });
-      this._formElement.addEventListener('submit', () => {
-          this._toggleButtonState();
-            });
-
-
-        };
-    
-
+    this._formElement.addEventListener("submit", () => {
+      setTimeout(() => {
+        this._toggleButtonState();
+      }, 0);
+    });
+  };
 
     enableValidation() {
           this._setEventListeners();

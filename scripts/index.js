@@ -92,9 +92,6 @@ constants.formProfileEdit.addEventListener('submit', function(evt) {
 
 constants.popupNewPlaceOpnBtn.addEventListener('click', function() {
   openPopup(constants.popupNewPlace); 
-  
-  
-    
 })
 
 
